@@ -126,6 +126,59 @@ ul li {
       background: #fff;
       border-top: 1px solid #eee;
     }
+
+    .story-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 30px;
+}
+
+.story-image {
+    flex: 1;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+
+.story-content {
+    flex: 1.5;
+}
+
+.story-content h2 {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.story-content p {
+    font-size: 20px;
+    line-height: 1.9;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.story-quote {
+    font-size: 24px !important;
+    font-weight: 600;
+    color: #4ec8d3;
+    margin-top: 35px;
+}
+
+@media (max-width: 900px) {
+  .story-section {
+    flex-direction: column;
+  }
+
+  .story-content h2 {
+    text-align: center;
+  }
+}
+
   </style>
 </head>
 
@@ -136,6 +189,15 @@ ul li {
   <img src="Lufkin-body-contouring-logo.png" alt="Lufkin Body Contouring Logo" style="max-width: 260px; height: auto;">
 </header>
 
+<!--NAVBAR-->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#our-story">Our Story</a>
+  <a href="#learn-more">Learn More</a>
+  <a href="https://book.squareup.com/appointments/bc52e454-dae1-4f17-9202-978a3354bf21/location/V38TF6VCY7BP3/services/7JNZWMEVUYE5GF226OV5CLXM" target="_blank">Book Now</a>
+</nav>
+
+<!--CAROUSEL-->
 <div class="carousel">
   <div class="slides">
 
@@ -171,6 +233,52 @@ ul li {
 
   </div>
 </div>
+
+<!--OUR STORY-->
+<section id="our-story" class="story-section">
+
+  <div class="story-image">
+    <img src="hs.jpg" alt="Founder of Lufkin Body Contouring">
+  </div>
+
+  <div class="story-content">
+    <h2>Our Story</h2>
+
+    <p>
+      My journey with the Zerona® Laser began in 2021 when I joined Austin Body Contouring as a body contouring laser technician. Over the next two years, I received hands-on training and gained extensive experience helping clients achieve their body goals through non-invasive body contouring treatments.
+    </p>
+
+    <p>
+      During my time there, I not only witnessed the incredible results clients experienced—I experienced the benefits of Zerona® myself. I had the opportunity to work with hundreds of individuals who were looking to lose inches and stubborn fat, improve their confidence, tighten loose skin, and minimize the appearance of scars and stretch marks. Watching clients transform physically and emotionally was one of the most rewarding parts of my career.
+    </p>
+
+    <p>
+      Every client's journey was unique, but one thing remained consistent: the confidence that came from seeing real results. Those experiences reinforced my passion for helping people feel comfortable, confident, and empowered in their own skin.
+    </p>
+
+    <p>
+      After welcoming my son, I made the decision to move back to my hometown of Lufkin to be closer to family and build the next chapter of my life. While I was excited to return home, I knew there was one thing missing—access to the advanced body contouring technology that had made such a positive impact on so many lives.
+    </p>
+
+    <p>
+      That's why I partnered to bring the revolutionary Zerona® Laser to East Texas. My goal is simple: to provide the people of Lufkin and the surrounding communities with access to the same innovative, non-invasive treatment that I saw change so many lives during my years in the industry.
+    </p>
+
+    <p>
+      At Lufkin Body Contouring, we're committed to helping our clients look and feel their best through personalized care, education, and proven technology. Whether you're looking to jumpstart your wellness journey, target stubborn areas that don't respond to diet and exercise, improve the appearance of loose skin, or simply invest in yourself, we're here to support you every step of the way.
+    </p>
+
+    <p>
+      We're proud to be bringing this one-of-a-kind treatment to our community and can't wait to help you achieve your goals.
+    </p>
+
+    <p class="story-quote">
+      Because confidence isn't about becoming someone else—it's about becoming the best version of yourself. ✨
+    </p>
+
+  </div>
+
+</section>
 
 <style>
 .carousel {
@@ -284,6 +392,52 @@ a:hover {
   text-decoration: underline;
 }
 
+.feature-image {
+    width: 100%;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.feature-image img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.extras-services {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.service-card {
+  max-width: 320px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.service-card h3 {
+  margin-top: 0;
+}
+
+.service-card p {
+  margin-bottom: 0;
+}
+
 @keyframes slide {
   0% { transform: translateX(0%); }
   33% { transform: translateX(0%); }
@@ -322,6 +476,10 @@ a:hover {
       eliminate it over time. It is painless, relaxing, and requires no downtime.
     </p>
   </div>
+
+  <div class="feature-image">
+    <img src="bikini.webp" alt="Zerona Laser Body Contouring">
+</div>
 
   <!-- BENEFITS -->
   <div class="section">
@@ -426,10 +584,19 @@ a:hover {
       While visiting Lash Essence, clients can also enhance their results with:
     </p>
 
-    <ul>
-      <li>Lash Extensions & Beauty Services</li>
-      <li>Airbrush Tanning for a sculpted, finished look</li>
-    </ul>
+    <div class="extras-services">
+
+  <a href="https://lashessence.square.site" target="_blank" class="service-card">
+    <h3>Lash Extensions</h3>
+    <p>Complete your transformation with beautiful, customized lash extensions.</p>
+  </a>
+
+  <a href="https://lashessence.square.site/airbrush-tanning" target="_blank" class="service-card">
+    <h3>Airbrush Tanning</h3>
+    <p>Enhance your body contouring results with a flawless sun-kissed glow.</p>
+  </a>
+
+</div>
 
   </div>
 
