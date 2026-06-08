@@ -28,6 +28,44 @@
       height: auto;
     }
 
+    /* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 18px 20px;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.navbar a {
+    color: #4ec8d3;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #2aa9b5;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
     .hero {
       background: linear-gradient(to right, #f8f8f8, #ffffff);
       padding: 60px 20px;
@@ -128,73 +166,99 @@ ul li {
     }
 
     .story-section {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    max-width: 1200px;
-    margin: 80px auto;
-    padding: 0 30px;
+max-width: 1100px;
+margin: 80px auto;
+padding: 0 30px;
 }
 
-.story-image {
-    flex: 1;
+.story-header {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 40px;
+margin-bottom: 50px;
 }
 
-.story-image img {
-    width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+.story-photo {
+width: 250px;
+height: auto;
+border-radius: 16px;
+box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+
+.story-header-text h2 {
+font-size: 44px;
+margin: 0;
+}
+
+.story-subtitle {
+font-size: 20px;
+color: #4ec8d3;
+margin-top: 10px;
+margin-bottom: 0;
 }
 
 .story-content {
-    flex: 1.5;
-}
-
-.story-content h2 {
-    font-size: 42px;
-    margin-bottom: 25px;
+max-width: 900px;
+margin: 0 auto;
 }
 
 .story-content p {
-    font-size: 20px;
-    line-height: 1.9;
-    color: #444;
-    margin-bottom: 20px;
+font-size: 22px;
+line-height: 1.9;
+color: #444;
+margin-bottom: 22px;
 }
 
 .story-quote {
-    font-size: 24px !important;
-    font-weight: 600;
-    color: #4ec8d3;
-    margin-top: 35px;
+font-size: 28px !important;
+font-weight: 600;
+color: #4ec8d3;
+text-align: center;
+margin-top: 40px;
 }
 
-@media (max-width: 900px) {
-  .story-section {
-    flex-direction: column;
-  }
+@media (max-width: 768px) {
 
-  .story-content h2 {
+.story-header {
+    flex-direction: column;
     text-align: center;
-  }
+}
+
+.story-photo {
+    width: 70%;
+    max-width: 300px;
+}
+
 }
 
   </style>
 </head>
 
-<body>
+<body id="top">
 
   <!-- LOGO -->
   <header>
   <img src="Lufkin-body-contouring-logo.png" alt="Lufkin Body Contouring Logo" style="max-width: 260px; height: auto;">
 </header>
 
-<!--NAVBAR-->
-<nav>
-  <a href="#home">Home</a>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="#top">Home</a>
+
   <a href="#our-story">Our Story</a>
-  <a href="#learn-more">Learn More</a>
-  <a href="https://book.squareup.com/appointments/bc52e454-dae1-4f17-9202-978a3354bf21/location/V38TF6VCY7BP3/services/7JNZWMEVUYE5GF226OV5CLXM" target="_blank">Book Now</a>
+
+  <a href="#my-results">My Results</a>
+
+  <a href="#real-client-results">Client Results</a>
+
+  <a href="https://austinbodycontouring.com/about-zerona/" target="_blank">
+    Learn More
+  </a>
+
+  <a href="https://book.squareup.com/appointments/bc52e454-dae1-4f17-9202-978a3354bf21/location/V38TF6VCY7BP3/services/7JNZWMEVUYE5GF226OV5CLXM" target="_blank">
+    Book Now
+  </a>
 </nav>
 
 <!--CAROUSEL-->
@@ -237,46 +301,70 @@ ul li {
 <!--OUR STORY-->
 <section id="our-story" class="story-section">
 
-  <div class="story-image">
-    <img src="hs.jpg" alt="Founder of Lufkin Body Contouring">
-  </div>
+    <div class="story-header">
 
-  <div class="story-content">
-    <h2>Our Story</h2>
+        <img src="hs.jpg" alt="Founder of Lufkin Body Contouring" class="story-photo">
 
-    <p>
-      My journey with the Zerona® Laser began in 2021 when I joined Austin Body Contouring as a body contouring laser technician. Over the next two years, I received hands-on training and gained extensive experience helping clients achieve their body goals through non-invasive body contouring treatments.
+        <div class="story-header-text">
+            <h2>Our Story</h2>
+
+            <p class="story-subtitle">
+                Bringing advanced Zerona® Laser body contouring to East Texas.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="story-content">
+
+        <!-- KEEP ALL YOUR EXISTING STORY PARAGRAPHS HERE -->
+         <p>
+            My journey with the Zerona® Laser began in 2021 when I joined Austin Body Contouring as a body contouring laser technician. Over the next two years, I received hands-on training and gained extensive experience helping clients achieve their body goals through non-invasive body contouring treatments.
+        </p>
+
+        <p>
+            During my time there, I not only witnessed the incredible results clients experienced—I experienced the benefits of Zerona® myself. I had the opportunity to work with hundreds of individuals who were looking to lose inches and stubborn fat, improve their confidence, tighten loose skin, and minimize the appearance of scars and stretch marks. Watching clients transform physically and emotionally was one of the most rewarding parts of my career.
+        </p>
+
+        <p>
+            Every client's journey was unique, but one thing remained consistent: the confidence that came from seeing real results. Those experiences reinforced my passion for helping people feel comfortable, confident, and empowered in their own skin.
+        </p>
+
+        <p>
+            After welcoming my son, I made the decision to move back to my hometown of Lufkin to be closer to family and build the next chapter of my life. While I was excited to return home, I knew there was one thing missing—access to the advanced body contouring technology that had made such a positive impact on so many lives.
+        </p>
+
+        <p>
+            That's why I partnered to bring the revolutionary Zerona® Laser to East Texas. My goal is simple: to provide the people of Lufkin and the surrounding communities with access to the same innovative, non-invasive treatment that I saw change so many lives during my years in the industry.
+        </p>
+
+        <p>
+            At Lufkin Body Contouring, we're committed to helping our clients look and feel their best through personalized care, education, and proven technology.
+        </p>
+
+        <p class="story-quote">
+            Because confidence isn't about becoming someone else—it's about becoming the best version of yourself. ✨
+        </p>
+
+    </div>
+
+</section>
+
+<section id="my-results" class="section">
+
+    <h2>My Personal Zerona Results</h2>
+
+    <p style="text-align:center; max-width:850px; margin:0 auto 30px;">
+        Before bringing Zerona® to Lufkin, I experienced the treatment myself while working as a laser technician at Austin Body Contouring. Seeing my own transformation helped fuel my passion for helping others achieve their goals through non-invasive body contouring.
     </p>
 
-    <p>
-      During my time there, I not only witnessed the incredible results clients experienced—I experienced the benefits of Zerona® myself. I had the opportunity to work with hundreds of individuals who were looking to lose inches and stubborn fat, improve their confidence, tighten loose skin, and minimize the appearance of scars and stretch marks. Watching clients transform physically and emotionally was one of the most rewarding parts of my career.
-    </p>
+    <div class="personal-results">
+        <img src="mybeforeandafterpic.jpg" alt="Christina's Personal Zerona Results">
+    </div>
 
-    <p>
-      Every client's journey was unique, but one thing remained consistent: the confidence that came from seeing real results. Those experiences reinforced my passion for helping people feel comfortable, confident, and empowered in their own skin.
+    <p style="text-align:center; max-width:850px; margin:30px auto 0;">
+        Having experienced the benefits firsthand, I'm proud to now offer the same advanced technology to clients throughout Lufkin and East Texas.
     </p>
-
-    <p>
-      After welcoming my son, I made the decision to move back to my hometown of Lufkin to be closer to family and build the next chapter of my life. While I was excited to return home, I knew there was one thing missing—access to the advanced body contouring technology that had made such a positive impact on so many lives.
-    </p>
-
-    <p>
-      That's why I partnered to bring the revolutionary Zerona® Laser to East Texas. My goal is simple: to provide the people of Lufkin and the surrounding communities with access to the same innovative, non-invasive treatment that I saw change so many lives during my years in the industry.
-    </p>
-
-    <p>
-      At Lufkin Body Contouring, we're committed to helping our clients look and feel their best through personalized care, education, and proven technology. Whether you're looking to jumpstart your wellness journey, target stubborn areas that don't respond to diet and exercise, improve the appearance of loose skin, or simply invest in yourself, we're here to support you every step of the way.
-    </p>
-
-    <p>
-      We're proud to be bringing this one-of-a-kind treatment to our community and can't wait to help you achieve your goals.
-    </p>
-
-    <p class="story-quote">
-      Because confidence isn't about becoming someone else—it's about becoming the best version of yourself. ✨
-    </p>
-
-  </div>
 
 </section>
 
@@ -406,6 +494,19 @@ a:hover {
     box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
+.personal-results {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.personal-results img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
 .extras-services {
   display: flex;
   justify-content: center;
@@ -497,9 +598,9 @@ a:hover {
   <img src="ba.webp" alt="Body Contouring Results">
 </div>
 
-  <div class="section">
+  <div id="real-client-results" class="section">
 
-  <h2>Amazing Before & After Results</h2>
+  <h2>Real Client Results</h2>
 
   <p style="text-align:center; max-width:800px; margin:0 auto 30px;">
     Lufkin Body Contouring is proud to bring Zerona laser body contouring
